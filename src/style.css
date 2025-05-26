@@ -1,0 +1,134 @@
+body {
+  background: #000;
+}
+
+/* mobile first */
+.background {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  min-height: 900px;
+  overflow: hidden;
+}
+
+.main-app {
+  font-family: "League Spartan";
+  margin: 150px auto 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.main-app h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.main-app p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.background .base-bg {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+      195deg,
+      rgba(64, 0, 255, 0.8) 9.5%,
+      rgba(64, 0, 255, 0.4) 28%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    #000;
+}
+
+.shapes {
+  pointer-events: none;
+}
+
+.shapes--mobile {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  max-width: 1500px;
+  min-width: 1200px;
+  z-index: -1;
+  top: -180px;
+  transform: translateX(calc(-50% + 100px));
+  overflow: visible;
+}
+
+.shapes--mobile .oval {
+  filter: blur(100px);
+  mix-blend-mode: screen;
+}
+
+.shapes--mobile .poly-2,
+.shapes--mobile .poly-1 {
+  mix-blend-mode: plus-lighter;
+  filter: blur(45px);
+}
+
+.shapes--desktop {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .shapes--mobile {
+    top: -250px;
+  }
+}
+
+/* desktop/laptop values */
+@media (min-width: 767px) {
+  .background .base-bg {
+    background: linear-gradient(
+        189deg,
+        rgba(64, 0, 255, 0.8) 0%,
+        rgba(64, 0, 255, 0.4) 25%,
+        rgba(0, 0, 0, 0) 95%
+      )
+      #000;
+  }
+
+  .shapes--mobile {
+    display: none;
+  }
+
+  .shapes--desktop {
+    display: block;
+    inset: 0;
+    top: -11vw;
+    left: -15%;
+    width: 120%;
+    max-width: 120%;
+    position: absolute;
+    overflow: visible;
+  }
+
+  .shapes--desktop .oval {
+    filter: blur(180px);
+    mix-blend-mode: screen;
+  }
+
+  .shapes--desktop .poly-1 {
+    filter: blur(80px);
+    mix-blend-mode: plus-lighter;
+  }
+
+  .shapes--desktop .poly-2 {
+    filter: blur(120px);
+    mix-blend-mode: plus-lighter;
+  }
+
+  .main-app h1 {
+    font-size: 3.5rem;
+  }
+
+  .main-app p {
+    font-size: 3.5rem;
+    font-weight: 200;
+  }
+}
