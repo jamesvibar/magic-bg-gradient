@@ -61,14 +61,14 @@ body {
 }
 
 .shapes--mobile .oval {
-  filter: blur(100px);
+  /* filter: blur(100px); */
   mix-blend-mode: screen;
 }
 
 .shapes--mobile .poly-2,
 .shapes--mobile .poly-1 {
   mix-blend-mode: plus-lighter;
-  filter: blur(45px);
+  /* filter: blur(45px); */
 }
 
 .shapes--desktop {
@@ -109,17 +109,17 @@ body {
   }
 
   .shapes--desktop .oval {
-    filter: blur(180px);
+    /* filter: blur(180px); */
     mix-blend-mode: screen;
   }
 
   .shapes--desktop .poly-1 {
-    filter: blur(80px);
+    /* filter: blur(80px); */
     mix-blend-mode: plus-lighter;
   }
 
   .shapes--desktop .poly-2 {
-    filter: blur(120px);
+    /* filter: blur(120px); */
     mix-blend-mode: plus-lighter;
   }
 

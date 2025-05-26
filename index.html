@@ -24,23 +24,40 @@
           viewBox="0 0 818 411"
           class="shapes shapes--mobile"
         >
+          <defs>
+            <filter
+              id="blur-filter-mobile"
+              width="200%"
+              height="300%"
+              x="-50%"
+              y="-100%"
+            >
+              <feGaussianBlur stdDeviation="80" />
+            </filter>
+            <filter id="blur-filter-mobile2" width="200%" height="200%" x="-0%" y="0%">
+              <feGaussianBlur stdDeviation="50" />
+            </filter>
+          </defs>
           <path
             class="oval"
             fill="#4B25CF"
             fill-opacity="0.5"
             d="M631.7 191.889c-12.117 54.664-163.14 67.68-337.32 29.073C120.2 182.354-11.1783 106.743.9382 52.0788 13.0546-2.5851 164.078-15.6014 338.258 23.0061 512.438 61.6135 643.816 137.225 631.7 191.889Z"
+            filter="url(#blur-filter-mobile)"
           />
           <path
             class="poly-1"
             fill="#00FFD9"
             fill-opacity="0.5"
             d="m535.26 410.303 225.056-219.609 56.947 80.495L535.26 410.303Z"
+            filter="url(#blur-filter-mobile)"
           />
           <path
             class="poly-2"
             fill="#6200B2"
             fill-opacity="1"
             d="M543.495 287.547 302.043 139.293l41.82-52.8067L543.495 287.547Z"
+            filter="url(#blur-filter-mobile2)"
           />
         </svg>
         <svg
@@ -49,23 +66,40 @@
           viewBox="0 0 1859 646"
           class="shapes shapes--desktop"
         >
+          <defs>
+            <filter
+              id="blur-filter"
+              width="200%"
+              height="300%"
+              x="-50%"
+              y="-100%"
+            >
+              <feGaussianBlur stdDeviation="100" />
+            </filter>
+            <filter id="blur-filter2" width="200%" height="200%" x="-0%" y="0%">
+              <feGaussianBlur stdDeviation="90" />
+            </filter>
+          </defs>
           <path
             class="oval"
             fill="#4B25CF"
             fill-opacity=".5"
             d="M0 0c1088.87 64.2949 1909.56 189.874 1833.77 280.695C1764.44 363.778 968.874 389.024 0 343.78V0Z"
+            filter="url(#blur-filter)"
           />
           <path
             class="poly-2"
             fill="#00FFD9"
             fill-opacity=".5"
             d="m1859 567.75-743.52 77.393L1859 416.704V567.75Z"
+            filter="url(#blur-filter)"
           />
           <path
             class="poly-1"
             fill="#6200B2"
             fill-opacity="1"
             d="M1281.36 446.024 0 306.188v-184.2L214.641 50 1281.36 446.024Z"
+            filter="url(#blur-filter2)"
           />
         </svg>
       </div>
